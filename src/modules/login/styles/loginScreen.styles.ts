@@ -4,7 +4,7 @@ export const ContainerLoginScreen = styled.div`
   width: 100%;
   display: flex;
   justify-content: right;
-`
+`;
 
 export const BackgroundImage = styled.img`
   position: absolute;
@@ -16,9 +16,7 @@ export const BackgroundImage = styled.img`
   z-index: -1;
 `;
 
-export const LogoImage = styled.img`
-  
-`;
+export const LogoImage = styled.img``;
 
 export const ContainerLogin = styled.div`
   display: flex;
@@ -32,11 +30,12 @@ export const ContainerLogin = styled.div`
   right: 0;
   top: 0;
   z-index: 2;
-`
+`;
 
 export const LimitedContainer = styled.div`
   width: 100%;
   max-width: 498px;
   display: flex;
   justify-content: center;
-`
+  flex-direction: column;
+`;
