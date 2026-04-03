@@ -1,17 +1,17 @@
 import { Input as InputAntd, type InputProps as InputPropsAntd } from 'antd';
-import { BoxInput, TitleInput } from './input.styles'; 
+import { BoxInput, TitleInput } from './input.styles';
 
 interface InputProps extends InputPropsAntd {
-    title?: string;
+  title?: string;
 }
 
 const Input = ({ title, ...props }: InputProps) => {
-    return (
-        <BoxInput>
-            {title && <TitleInput>{title}</TitleInput>}
-            <InputAntd {...props} />
-        </BoxInput>
-    );
+  return (
+    <BoxInput>
+      {title && <TitleInput>{title}</TitleInput>}
+      <InputAntd {...props} />
+    </BoxInput>
+  );
 };
 
 export default Input;
