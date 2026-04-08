@@ -6,10 +6,10 @@ import {
   BackgroundImage,
   ContainerLogin,
   LimitedContainer,
-  LogoImage,
   ContainerLoginScreen,
   TitleLogin,
 } from '../styles/loginScreen.styles';
+import SVGLogo from '../../../shared/icons/SVGLogo';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -33,22 +33,20 @@ const LoginScreen = () => {
       },
     })
       .then((result) => {
-        alert(`Fez Login ${result.data.accessToken}`)
+        alert(`Fez Login ${result.data.accessToken}`);
         return result.data;
       })
       .catch(() => {
-        alert("Usúario ou senha inválido");
+        alert('Usúario ou senha inválido');
       });
   };
-
-
 
   return (
     <ContainerLoginScreen>
       <BackgroundImage src="./background.png" />
       <ContainerLogin>
         <LimitedContainer>
-          <LogoImage src="./logo.png" />
+          <SVGLogo />
           <TitleLogin level={2} type="secondary">
             LOGIN
           </TitleLogin>
